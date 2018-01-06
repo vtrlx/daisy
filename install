@@ -7,6 +7,7 @@ fi
 
 # create the pcf files
 bdftopcf -o ~/.fonts/daisy.pcf daisy.bdf
+bdftopcf -o ~/.fonts/daisy\ bold.pcf daisy\ bold.bdf
 
 # install the fonts
 mkfontdir ~/.fonts
