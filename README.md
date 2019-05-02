@@ -10,20 +10,17 @@ at the same size as the non-bold.
 Dependencies
 ------------
 
-- bdftopcf
-- make
+- make (for easy installation)
 
-(Most UNIXes will have these pre-installed.)
+(Most UNIXes will have this pre-installed.)
 
 Installation
 ------------
 
     make
-    make install
 
-This will install `daisy.pcf` and `daisy_bold.pcf` to `~/.fonts` by
+This will install `daisy.bdf` and `daisy_bold.bdf` to `~/.fonts` by
 default. To install elsewhere, set the FONTSDIR variable before
 installing:
 
-    make
-    FONTSDIR=/usr/local/share/fonts make install
+    FONTSDIR=/usr/local/share/fonts make

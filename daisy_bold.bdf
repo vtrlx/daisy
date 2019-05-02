@@ -1,5 +1,5 @@
 STARTFONT 2.1
-FONT -daisy-fixed-bold-r-normal--10-110-75-75-m-50-ISO8859-1
+FONT -daisy-daisy-bold-r-normal--10-110-75-75-m-50-ISO8859-1
 SIZE 11 75 75
 FONTBOUNDINGBOX 5 10 0 -2
 STARTPROPERTIES 25
@@ -27,7 +27,7 @@ FONT_ASCENT 8
 _GBDFED_INFO "Edited with gbdfed 1.6."
 FACE_NAME "daisy"
 FOUNDRY "daisy"
-FAMILY_NAME "fixed"
+FAMILY_NAME "daisy"
 ENDPROPERTIES
 CHARS 373
 STARTCHAR char32
