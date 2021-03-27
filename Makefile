@@ -3,6 +3,17 @@ PCF = daisy.pcf daisy_bold.pcf
 
 all: $(PCF)
 
+$(FONTSDIR):
+	mkdir $@
+
+%.pcf: %.bdf
+	bdftopcf -o $@ $<
+
+.PHONY: clean install
+
+clean:
+	rm -f $(PCF)
+
 install: $(FONTSDIR) $(PCF)
 	install -t $^
 	mkfontdir $<
@@ -11,14 +22,3 @@ install: $(FONTSDIR) $(PCF)
 	xset fp rehash
 	fc-cache
 	fc-cache -fv
-
-$(FONTSDIR):
-	mkdir $@
-
-%.pcf: %.bdf
-	bdftopcf -o $@ $<
-
-.PHONY: clean
-
-clean:
-	rm -f $(PCF)
