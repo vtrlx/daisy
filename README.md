@@ -11,6 +11,7 @@ Dependencies
 ------------
 
 - make (for easy installation)
+- bdftopcf (brew install xquartz on macOS)
 
 (Most UNIXes will have this pre-installed.)
 
