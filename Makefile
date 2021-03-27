@@ -17,3 +17,8 @@ $(FONTSDIR):
 
 %.pcf: %.bdf
 	bdftopcf -o $@ $<
+
+.PHONY: clean
+
+clean:
+	rm -f $(PCF)

@@ -10,18 +10,21 @@ at the same size as the non-bold.
 Dependencies
 ------------
 
-- make (for easy installation)
-- bdftopcf (brew install xquartz on macOS)
+- make
+- bdftopcf (to compile the font)
+- mkfontscale (to install the font)
 
-(Most UNIXes will have this pre-installed.)
+Most UNIXes will have `make` pre-installed.  To install `bdftopcf` on macOS, run
+`brew install xquartz`.  On Linux, use your distro's package manager.
 
 Installation
 ------------
 
     make
+    make install
 
-This will install `daisy.bdf` and `daisy_bold.bdf` to `~/.fonts` by
+This will install `daisy.pcf` and `daisy_bold.pcf` to `~/.fonts` by
 default. To install elsewhere, set the FONTSDIR variable before
 installing:
 
-    FONTSDIR=/usr/local/share/fonts make
+    FONTSDIR=/usr/local/share/fonts make install
