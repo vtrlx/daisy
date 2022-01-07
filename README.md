@@ -17,10 +17,4 @@ Dependencies
 Installation
 ------------
 
-    make
-
-This will install `daisy.bdf` and `daisy_bold.bdf` to `~/.fonts` by
-default. To install elsewhere, set the FONTSDIR variable before
-installing:
-
-    FONTSDIR=/usr/local/share/fonts make
+    make install

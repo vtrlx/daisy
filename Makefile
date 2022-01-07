@@ -1,12 +1,12 @@
-FONTSDIR ?= ~/.fonts
-PCF = daisy.pcf daisy_bold.pcf
+FONTSDIR ?= ~/.local/share/fonts
+OTB = daisy.otb daisy_bold.otb
 
-all: $(PCF)
+all: $(OTB)
 
 deploy:
 	zip /var/www/htdocs/daisy.zip daisy.bdf daisy_bold.bdf
 
-install: $(FONTSDIR) $(PCF)
+install: $(FONTSDIR) $(OTB)
 	install -t $^
 	mkfontdir $<
 	mkfontscale $<
@@ -18,5 +18,10 @@ install: $(FONTSDIR) $(PCF)
 $(FONTSDIR):
 	mkdir $@
 
-%.pcf: %.bdf
-	bdftopcf -o $@ $<
+%.otb: %.bdf
+	fonttosfnt -b -c -g 2 -m 2 -o $@ $<
+
+.PHONY: clean install
+
+clean:
+	rm -f *.otb
