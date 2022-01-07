@@ -16,7 +16,7 @@ $(FONTSDIR):
 	mkdir $@
 
 %.otb: %.bdf
-	fonttosfnt -b -c -g 2 -m 2 -o $@ $<
+	fonttosfnt -b -c -r -g 2 -m 2 -o $@ $<
 
 .PHONY: clean install
 
